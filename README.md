@@ -26,8 +26,7 @@ If you don't have a Coinbase Commerce account, <a href="https://commerce.coinbas
 3. Run the command to download module:
 
   ```bash
-	#At Present Composer didn't have access to private repository.
-	#composer require php/CoinbaseCommerce
+	composer require coinbase/coinbase-commerce-magento
   ```
 4. Run the following commands to install module:  
 
