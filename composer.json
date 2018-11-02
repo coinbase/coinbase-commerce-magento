@@ -1,5 +1,5 @@
 {
-    "name": "coinbasecommerce/module-paymentgateway",
+    "name": "coinbase/coinbase-commerce-magento",
     "description": "Coinbase Commerce Api integration for Magento 2",
     "type": "magento2-module",
     "version": "1.0.0",

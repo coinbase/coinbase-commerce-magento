@@ -159,7 +159,7 @@ class Receiver extends Action
                 return null;
             }
 
-            if ($event['type'] == 'charge:created') {
+            if ($event['type'] == 'charge:created' || $event['type'] == 'charge:pending') {
                 $this->saveOrderDetails($event);
             } elseif ($event['coinbaseStatus'] == 'UNRESOLVED') {
                 $this->orderHoldAction($event);

@@ -127,13 +127,15 @@ class Index extends \Magento\Framework\App\Action\Action
     private function setJsonData()
     {
         $order = $this->getOrder();
+
         $data = json_encode([
-            "name" => $this->getStoreName(),
+            "name" => $this->getStoreName() . " order #" . $order->getId(),
             "description" => "Purchased through Coinbase Commerce",
             "local_price" => $this->getPricing($order),
             "pricing_type" => "fixed_price",
             "metadata" => $this->getMetaData($order),
-            "redirect_url" => $this->_url->getUrl('coinbasecommerce/webhook/redirect')
+            "redirect_url" => $this->_url->getUrl("coinbasecommerce/webhook/redirect"),
+            "cancel_url" => $this->_url->getUrl("coinbasecommerce/webhook/cancel", ["order_id" => $order->getId()]),
         ]);
         return $data;
     }
