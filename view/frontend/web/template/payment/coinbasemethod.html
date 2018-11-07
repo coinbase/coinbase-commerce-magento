@@ -10,7 +10,7 @@
                name="payment[method]"
                class="radio"
                data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
-        <label data-bind="attr: {'for': getCode()}" class="label"><span data-bind="text: getTitle()"></span><a href=“https://commerce.coinbase.com/” target=“_blank” rel=“noopener”> (Learn More)</a>
+        <label data-bind="attr: {'for': getCode()}" class="label"><span data-bind="text: getTitle()"></span><a href="https://commerce.coinbase.com/" target="_blank" rel="noopener"> (Learn More)</a>
             <!-- CoinbaseMethod Logo -->
 			<span class="brandImages">
 				<img data-bind="attr: {src: getPaymentImage()[0], alt: $t('ethereum')}"
