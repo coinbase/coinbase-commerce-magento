@@ -107,6 +107,7 @@ class Index extends \Magento\Framework\App\Action\Action
         $metaData["customer_name"] = $order->getCustomerName();
         $metaData["customer_email"] = $order->getCustomerEmail();
         $metaData["store_increment_id"] = $order->getIncrementId();
+        $metaData["source"] = "magento";
         return $metaData;
     }
 
