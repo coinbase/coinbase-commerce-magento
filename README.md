@@ -74,5 +74,8 @@ In order to resolve the order status of “On Hold” Order. Merchant/Admin will
 4. Generate the invoice manually.
 
 
+## Integrate with other e-commerce platforms
+[Coinbase Commerce Integrations](https://commerce.coinbase.com/integrate)
+
 ## License
 [Open Source License](LICENSE)
