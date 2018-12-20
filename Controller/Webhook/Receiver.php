@@ -222,7 +222,8 @@ class Receiver extends Action
      */
     private function getEventData($input)
     {
-        $data['incrementId'] = $input->event->data->metadata->store_increment_id;
+        $data['incrementId'] = isset($input->event->data->metadata->store_increment_id) ?
+            $input->event->data->metadata->store_increment_id : null;
         $data['chargeCode'] = $input->event->data->code;
         $data['type'] = $input->event->type;
         $data['timeline'] = end($input->event->data->timeline);
@@ -257,6 +258,10 @@ class Receiver extends Action
      */
     private function getOrder($event)
     {
+        if (empty($event['incrementId'])) {
+            return null;
+        }
+
         $searchCriteria = $this->searchCriteriaBuilder
             ->addFilter('increment_id', $event['incrementId'], 'eq')->create();
         $orderList = $this->orderRepository->getList($searchCriteria)->getItems();
