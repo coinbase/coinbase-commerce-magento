@@ -13,6 +13,7 @@ Accept Cryptocurrencies on your Magento 2 store with Coinbase Commerce module.
     - Ethereum
     - Litecoin
     - USD Coin
+    - DAI
 
 ## Create an Account
 If you don't have a Coinbase Commerce account, <a href="https://commerce.coinbase.com/dashboard/settings">Sign Up</a>.
